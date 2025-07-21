@@ -67,3 +67,57 @@ export default tseslint.config([
   },
 ])
 ```
+
+## 🧪 Testing Setup
+
+This project uses **Jest** and **React Testing Library** for unit and integration testing.
+
+### Setup
+
+All necessary dependencies are already listed in `devDependencies`. If you need to reinstall, run:
+
+```bash
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event ts-jest @types/jest
+```
+
+### Configuration
+
+- Jest is configured for TypeScript using `ts-jest`.
+- The configuration file is `jest.config.js`.
+
+### Running Tests
+
+To run all tests:
+
+```bash
+npm test
+```
+
+Or, for watch mode (runs tests on file changes):
+
+```bash
+npm test -- --watch
+```
+
+### Writing Tests
+
+- Place your test files next to the components/hooks they test, using the `.test.tsx` or `.test.ts` suffix.
+- Example: `src/DemoAuthComponent.test.tsx`
+
+### Example Test File Structure
+
+```
+src/
+  DemoAuthComponent.tsx
+  DemoAuthComponent.test.tsx
+  context/
+    AuthContext.tsx
+    AuthContext.test.tsx
+  hooks/
+    useAuth.ts
+    useAuth.test.ts
+```
+
+### Useful Links
+- [Jest Docs](https://jestjs.io/docs/getting-started)
+- [React Testing Library Docs](https://testing-library.com/docs/)
